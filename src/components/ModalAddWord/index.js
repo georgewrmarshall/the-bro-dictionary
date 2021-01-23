@@ -1,0 +1,1 @@
+export { ModalAddWord } from "./ModalAddWord";

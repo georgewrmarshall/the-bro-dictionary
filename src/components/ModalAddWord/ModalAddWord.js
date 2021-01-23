@@ -1,0 +1,103 @@
+import React, { useState } from 'react';
+import {
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  Input,
+  Stack,
+  Textarea,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+} from '@chakra-ui/react';
+
+export const ModalAddWord = ({ isOpen, onOpen, onClose }) => {
+  const [values, setValues] = useState({
+    word: '',
+    definition: '',
+    example: '',
+  });
+  const handleSubmit = e => {
+    e.preventDefault();
+    alert(
+      `You've added: ${values.word} - ${values.definition} : ${values.example}`
+    );
+  };
+  const handleChange = e => {
+    const id = e.target.id;
+    const value = e.target.value;
+    setValues({
+      ...values,
+      [id]: value,
+    });
+    console.log('values', values);
+  };
+  return (
+    <>
+      <Modal isOpen={isOpen} onClose={onClose} size="lg">
+        <ModalOverlay />
+        <ModalContent style={{ borderRadius: '0.5rem' }}>
+          <ModalHeader>Add Bro-word</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody mb={5}>
+            <form onSubmit={handleSubmit}>
+              <Stack spacing={3}>
+                <FormControl>
+                  <FormLabel htmlFor="word">Bro-word</FormLabel>
+                  <Input
+                    id="word"
+                    value={values.word}
+                    onChange={handleChange}
+                    placeholder="Enter the bro-word"
+                    size="lg"
+                    isRequired
+                  />
+                  <FormHelperText id="word-helper-text">
+                    Must contain the word "bro"
+                  </FormHelperText>
+                </FormControl>
+                <FormControl>
+                  <FormLabel htmlFor="definition">Definition</FormLabel>
+                  <Input
+                    id="definition"
+                    value={values.definition}
+                    onChange={handleChange}
+                    placeholder="Enter the definition"
+                    size="lg"
+                    isRequired
+                  />
+                  <FormHelperText id="word-helper-text">
+                    Define your word (what is it?)
+                  </FormHelperText>
+                </FormControl>
+                <FormControl>
+                  <FormLabel htmlFor="example">Example</FormLabel>
+                  <Textarea
+                    id="example"
+                    value={values.example}
+                    onChange={handleChange}
+                    placeholder="Write an example on how to use your bro-word"
+                    size="lg"
+                    isRequired
+                  />
+                  <FormHelperText id="word-helper-text">
+                    Give an example of your bro-word out in the wild
+                  </FormHelperText>
+                </FormControl>
+                <Button colorScheme="teal" type="submit">
+                  Submit
+                </Button>
+              </Stack>
+            </form>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+    </>
+  );
+};
