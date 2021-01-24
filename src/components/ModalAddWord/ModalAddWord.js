@@ -5,7 +5,6 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
   Input,
@@ -17,7 +16,13 @@ import {
   FormHelperText,
 } from '@chakra-ui/react';
 
-export const ModalAddWord = ({ isOpen, onOpen, onClose }) => {
+export const ModalAddWord = ({
+  isOpen,
+  onOpen,
+  onClose,
+  setSlidesData,
+  slidesData,
+}) => {
   const [values, setValues] = useState({
     word: '',
     definition: '',
@@ -25,9 +30,14 @@ export const ModalAddWord = ({ isOpen, onOpen, onClose }) => {
   });
   const handleSubmit = e => {
     e.preventDefault();
-    alert(
-      `You've added: ${values.word} - ${values.definition} : ${values.example}`
-    );
+    const copySlidesData = slidesData;
+    setSlidesData([...copySlidesData, values]);
+    setValues({
+      word: '',
+      definition: '',
+      example: '',
+    });
+    onClose();
   };
   const handleChange = e => {
     const id = e.target.id;
