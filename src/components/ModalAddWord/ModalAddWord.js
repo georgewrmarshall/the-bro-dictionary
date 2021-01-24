@@ -5,7 +5,6 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
   Input,
@@ -13,11 +12,18 @@ import {
   Textarea,
   FormControl,
   FormLabel,
-  FormErrorMessage,
   FormHelperText,
+  useToast,
 } from '@chakra-ui/react';
 
-export const ModalAddWord = ({ isOpen, onOpen, onClose }) => {
+export const ModalAddWord = ({
+  isOpen,
+  onOpen,
+  onClose,
+  setSlidesData,
+  slidesData,
+}) => {
+  const toast = useToast();
   const [values, setValues] = useState({
     word: '',
     definition: '',
@@ -25,9 +31,23 @@ export const ModalAddWord = ({ isOpen, onOpen, onClose }) => {
   });
   const handleSubmit = e => {
     e.preventDefault();
-    alert(
-      `You've added: ${values.word} - ${values.definition} : ${values.example}`
-    );
+    const copySlidesData = slidesData;
+    // move entry to beginning of array
+    copySlidesData.unshift(values);
+    setSlidesData(copySlidesData);
+    setValues({
+      word: '',
+      definition: '',
+      example: '',
+    });
+    onClose();
+    toast({
+      title: `${values.word} was added!`,
+      description: `${values.word} was added to the Bro Dictionary`,
+      status: 'success',
+      duration: 9000,
+      isClosable: true,
+    });
   };
   const handleChange = e => {
     const id = e.target.id;
