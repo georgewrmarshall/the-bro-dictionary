@@ -26,7 +26,8 @@ export const Card = ({
         mb={[4, 9]}
         borderBottom="1px"
         borderColor="gray.200"
-        maxWidth="420"
+        maxW="425px"
+        mx="auto"
       />
       <Text
         color="gray.400"
