@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { Box } from '@chakra-ui/react';
 
 import { Card } from '../Card';
 
@@ -31,7 +32,9 @@ export const Carousel = ({ slidesData }) => {
       {slidesData.map((slideData, i) => {
         return (
           <div key={i}>
-            <Card data={slideData} />
+            <Box maxW="800px" m="0 auto" pb={12}>
+              <Card data={slideData} />
+            </Box>
           </div>
         );
       })}

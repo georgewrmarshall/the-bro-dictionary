@@ -6,6 +6,7 @@ export const StyledApp = styled.div`
   display: flex;
   align-items: center;
   height: 100vh;
+  padding-top: 126px;
 
   > div {
     flex: 0 0 100%;

@@ -6,13 +6,7 @@ export const Card = ({
   data = { word: 'Word', definition: 'Definition', example: 'Example' },
 }) => {
   return (
-    <Box
-      borderWidth="1px"
-      rounded="lg"
-      p={[6, 6, 12]}
-      m={[6, 6, 12]}
-      textAlign="center"
-    >
+    <Box borderWidth="1px" rounded="lg" p={[6, 6, 12]} textAlign="center">
       <Text
         style={{ textTransform: 'capitalize' }}
         fontSize={['3xl', '4xl', '6xl']}
