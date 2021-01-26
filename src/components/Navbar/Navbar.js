@@ -8,14 +8,14 @@ import { StyledNavbar } from './styles';
 
 export const Navbar = () => (
   <StyledNavbar>
-    <Box p={3}>
-      <Text fontSize="3xl" fontWeight="bold">
+    <Box p={3} textAlign="center" maxW="sm" ml="auto">
+      <Text fontSize="3xl" fontWeight="black" mb={3}>
         The Bro Dictionary
       </Text>
-      <Text>
+      <Text color="gray.400" fontSize="md">
         A collection of brocabulary to use when you're checking on your bros.
       </Text>
-      <ColorModeSwitcher justifySelf="flex-end" />
     </Box>
+    <ColorModeSwitcher ml="auto" mb="auto" />
   </StyledNavbar>
 );
