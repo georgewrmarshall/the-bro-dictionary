@@ -6,20 +6,45 @@ export const Card = ({
   data = { word: 'Word', definition: 'Definition', example: 'Example' },
 }) => {
   return (
-    <Box borderWidth="1px" rounded="lg" p={[3, 4, 12]} m={[3, 4, 12]}>
+    <Box
+      borderWidth="1px"
+      rounded="lg"
+      p={[6, 6, 12]}
+      m={[6, 6, 12]}
+      textAlign="center"
+    >
       <Text
         style={{ textTransform: 'capitalize' }}
-        fontSize={['2xl', '2xl', '5xl']}
-        fontWeight="bold"
-        mb={2}
+        fontSize={['3xl', '4xl', '6xl']}
+        fontWeight="black"
+        mb={3}
       >
         {data.word}
       </Text>
-      <Text fontSize={['xl', 'xl', '3xl']} mb={3}>
+      <Text color="gray.400" fontSize={['lg', 'xl', '2xl']} mb={3}>
+        <em>/ {data.phonetic} /</em>
+      </Text>
+      <Text fontSize={['lg', 'xl', '2xl']} mb={3}>
         {data.definition}
       </Text>
-      <Text fontSize={['md', 'md', '2xl']}>
-        <strong>Example:</strong> <em>"{data.example}"</em>
+      <Box
+        mt={[4, 9]}
+        mb={[4, 9]}
+        borderBottom="1px"
+        borderColor="gray.200"
+        maxWidth="420"
+      />
+      <Text
+        color="gray.400"
+        textTransform="uppercase"
+        fontWeight="bold"
+        fontSize="sm"
+        mb={3}
+      >
+        <em>Example</em>
+      </Text>
+      <Text fontWeight="bold" fontSize={['lg', 'lg', '2xl']}>
+        <em>"{data.example}"</em>
       </Text>
     </Box>
   );

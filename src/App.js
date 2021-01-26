@@ -27,17 +27,11 @@ function App(props) {
             <Carousel slidesData={slidesData} />
           </Box>
           <Box display="flex" justifyContent="center">
-            <Button onClick={onOpen} colorScheme="teal" size="lg">
+            <Button color="white" bgColor="gray.700" onClick={onOpen} size="lg">
               Add
             </Button>
-            <Button
-              isDisabled
-              ml={1}
-              colorScheme="teal"
-              variant="outline"
-              size="lg"
-            >
-              Share
+            <Button ml={1} color="white" bgColor="gray.700" size="lg">
+              Copy
             </Button>
           </Box>
         </Box>

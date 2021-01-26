@@ -41,7 +41,7 @@ const ColorModeToggleBar = () => {
 
 const withChakra = (StoryFn: Function) => {
   return (
-    <ChakraProvider theme={extendTheme({ direction: theme })}>
+    <ChakraProvider theme={theme}>
       <ColorModeToggleBar />
       <StoryFn />
     </ChakraProvider>

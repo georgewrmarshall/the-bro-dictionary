@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledApp = styled.div`
   /* height: 100vh;
@@ -14,7 +14,7 @@ export const StyledApp = styled.div`
 
   .slick-prev,
   .slick-next {
-    background-color: #319795;
+    background-color: #e2e8f0;
     width: 3rem;
     height: 3rem;
     display: flex;

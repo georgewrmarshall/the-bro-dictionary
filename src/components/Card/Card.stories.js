@@ -8,6 +8,7 @@ export default {
   argTypes: {
     data: {
       word: { control: 'string' },
+      phonetic: { control: 'string' },
       definition: { control: 'string' },
       example: { control: 'string' },
     },
@@ -20,6 +21,7 @@ export const DefaultStory = Template.bind({});
 DefaultStory.args = {
   data: {
     word: 'Bilbro Baggins',
+    phonetic: 'Baɪlbɔɪə Bdʒgɔɪns',
     definition: 'The bro that likes to go on adventures',
     example: 'Keen for an adventure today Bilbro Baggins?',
   },
