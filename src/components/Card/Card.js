@@ -2,7 +2,9 @@ import React from 'react';
 
 import { Text, Box } from '@chakra-ui/react';
 
-export const Card = ({ data }) => {
+export const Card = ({
+  data = { word: 'Word', definition: 'Definition', example: 'Example' },
+}) => {
   return (
     <Box borderWidth="1px" rounded="lg" p={[3, 4, 12]} m={[3, 4, 12]}>
       <Text
