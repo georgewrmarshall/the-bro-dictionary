@@ -1,15 +1,9 @@
 import React from 'react';
 
-import {
-  Button,
-  Box,
-  useDisclosure,
-  ChakraProvider,
-  theme,
-} from '@chakra-ui/react';
+import { Button, Box, useDisclosure, ChakraProvider } from '@chakra-ui/react';
 
 // Components
-import { ModalAddWord, Navbar, Carousel } from './components';
+import { ModalAddWord, Navbar, Carousel, theme } from './components';
 
 // Utils
 import { useLocalStorageState } from './utils';
