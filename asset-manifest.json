@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/the-bro-dictionary/static/js/main.1ad6977e.chunk.js",
-    "main.js.map": "/the-bro-dictionary/static/js/main.1ad6977e.chunk.js.map",
-    "runtime-main.js": "/the-bro-dictionary/static/js/runtime-main.da0b379e.js",
-    "runtime-main.js.map": "/the-bro-dictionary/static/js/runtime-main.da0b379e.js.map",
-    "static/js/2.7fb83f1d.chunk.js": "/the-bro-dictionary/static/js/2.7fb83f1d.chunk.js",
-    "static/js/2.7fb83f1d.chunk.js.map": "/the-bro-dictionary/static/js/2.7fb83f1d.chunk.js.map",
-    "static/js/3.a9c8c380.chunk.js": "/the-bro-dictionary/static/js/3.a9c8c380.chunk.js",
-    "static/js/3.a9c8c380.chunk.js.map": "/the-bro-dictionary/static/js/3.a9c8c380.chunk.js.map",
+    "main.js": "/the-bro-dictionary/static/js/main.4bc05b7e.chunk.js",
+    "main.js.map": "/the-bro-dictionary/static/js/main.4bc05b7e.chunk.js.map",
+    "runtime-main.js": "/the-bro-dictionary/static/js/runtime-main.fbfb341c.js",
+    "runtime-main.js.map": "/the-bro-dictionary/static/js/runtime-main.fbfb341c.js.map",
+    "static/js/2.d292db3e.chunk.js": "/the-bro-dictionary/static/js/2.d292db3e.chunk.js",
+    "static/js/2.d292db3e.chunk.js.map": "/the-bro-dictionary/static/js/2.d292db3e.chunk.js.map",
+    "static/js/3.f3c807b9.chunk.js": "/the-bro-dictionary/static/js/3.f3c807b9.chunk.js",
+    "static/js/3.f3c807b9.chunk.js.map": "/the-bro-dictionary/static/js/3.f3c807b9.chunk.js.map",
     "index.html": "/the-bro-dictionary/index.html",
-    "static/js/2.7fb83f1d.chunk.js.LICENSE.txt": "/the-bro-dictionary/static/js/2.7fb83f1d.chunk.js.LICENSE.txt"
+    "static/js/2.d292db3e.chunk.js.LICENSE.txt": "/the-bro-dictionary/static/js/2.d292db3e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.da0b379e.js",
-    "static/js/2.7fb83f1d.chunk.js",
-    "static/js/main.1ad6977e.chunk.js"
+    "static/js/runtime-main.fbfb341c.js",
+    "static/js/2.d292db3e.chunk.js",
+    "static/js/main.4bc05b7e.chunk.js"
   ]
 }
