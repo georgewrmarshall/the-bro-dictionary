@@ -17,7 +17,7 @@ import data from './content.json';
 function App(props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [slidesData, setSlidesData] = useLocalStorageState('slides-data', data);
-  console.log('slidesData', slidesData);
+  console.log('slidesData', typeof slidesData, slidesData);
   return (
     <ChakraProvider theme={theme}>
       <StyledApp {...props}>

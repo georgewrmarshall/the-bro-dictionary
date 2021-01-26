@@ -34,7 +34,10 @@ export const ModalAddWord = ({
     const copySlidesData = slidesData;
     // move entry to beginning of array
     copySlidesData.unshift(values);
-    setSlidesData(copySlidesData);
+
+    // Not sure why but have to spread array for it to
+    // be stored in local storage
+    setSlidesData([...copySlidesData]);
     setValues({
       word: '',
       definition: '',
